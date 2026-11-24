@@ -43,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
+            if (username.contains("Marc") || password.contains("1234")) {
+                Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+            }
+
             // Navigate to studentPage
             Intent intent = new Intent(MainActivity.this, studentPage.class);
             startActivity(intent);
